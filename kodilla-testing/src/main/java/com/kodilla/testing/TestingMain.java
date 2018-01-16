@@ -22,9 +22,22 @@ public class TestingMain {
 
         System.out.println(resultAdd);
 
+        if (resultAdd == 9) {
+            System.out.println("test OK");
+        } else {
+            System.out.println("Error!");
+        }
+
+
         int resultSub = calculator.substract(5, 4);
 
         System.out.println(resultSub);
+
+        if (resultSub == 1) {
+            System.out.println("test OK");
+        } else {
+            System.out.println("Error!");
+        }
 
 
     }
