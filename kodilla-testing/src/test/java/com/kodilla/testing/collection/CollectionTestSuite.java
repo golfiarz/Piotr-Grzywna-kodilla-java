@@ -1,7 +1,7 @@
 package com.kodilla.testing.collection;
 
 import com.kodilla.testing.collection.OddNumbersExterminator;
-import junit.*;
+import org.junit.*;
 import org.junit.Assert;
 import org.junit.Test;
 

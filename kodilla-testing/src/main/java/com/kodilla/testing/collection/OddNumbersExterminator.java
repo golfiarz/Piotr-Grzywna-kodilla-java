@@ -12,7 +12,7 @@ public class OddNumbersExterminator {
 
     public void exterminate(ArrayList<Integer> number) {
 
-        ArrayList<Integer> even new ArrayList<Integer>();
+        ArrayList<Integer> even = new ArrayList<Integer>();
         int counter = number.size();
         if (counter == 0) {
             System.out.println("List empty" + counter);
