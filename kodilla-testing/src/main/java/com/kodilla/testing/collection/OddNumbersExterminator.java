@@ -15,7 +15,7 @@ public class OddNumbersExterminator {
         ArrayList<Integer> even = new ArrayList<Integer>();
         int counter = number.size();
         if (counter == 0) {
-            System.out.println("List empty" + counter);
+            System.out.println("List empty: " + counter);
         } else {
 
             for (int n = 0; n < counter; n++) {
