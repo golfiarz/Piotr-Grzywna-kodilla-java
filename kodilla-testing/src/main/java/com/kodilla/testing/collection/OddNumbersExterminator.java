@@ -10,13 +10,11 @@ public class OddNumbersExterminator {
         even = new ArrayList<Integer>();
     }
 
-    public void exterminate(ArrayList<Integer> number) {
+    public ArrayList<Integer> exterminate(ArrayList<Integer> number) {
 
         ArrayList<Integer> even = new ArrayList<Integer>();
         int counter = number.size();
-        if (counter == 0) {
-            System.out.println("List empty: " + counter);
-        } else {
+
 
             for (int n = 0; n < counter; n++) {
                 int numberValue = number.get(n);
@@ -25,11 +23,14 @@ public class OddNumbersExterminator {
 
                 }
             }
-        }
-
         for (Integer numberNewList : even) {
-            System.out.println(numberNewList);
-        }
+                System.out.println(numberNewList);
+                }
+
+
+        return even;
+
     }
-}
+    }
+
 

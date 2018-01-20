@@ -28,7 +28,7 @@ public class CollectionTestSuite {
    @Test
     public void testOddNumbersExterminatorEmptyList() {
        //Given
-       Random randomGenerator = new Random();
+
        ArrayList<Integer> number = new ArrayList<Integer>() ;
        OddNumbersExterminator exterm = new OddNumbersExterminator();
        exterm.exterminate(number);
@@ -51,9 +51,17 @@ public class CollectionTestSuite {
         }
         //When
         System.out.println("Testing Normal List");
-        //Then
         OddNumbersExterminator exterm = new OddNumbersExterminator();
-        exterm.exterminate(number);
+        ArrayList<Integer> result = exterm.exterminate(number);
+        //Then
+        for (int k=0; k<result.size(); k++) {
+            int numberEven = result.get(k);
+            Assert.assertEquals(true, numberEven % 2 == 0);
+
+        }
+
+
+
 
     }
 }
