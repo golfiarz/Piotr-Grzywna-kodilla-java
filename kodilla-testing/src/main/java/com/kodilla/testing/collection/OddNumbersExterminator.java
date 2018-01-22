@@ -3,7 +3,7 @@ import java.util.*;
 import java.lang.*;
 
 public class OddNumbersExterminator {
-    ArrayList<Integer> even;
+    private ArrayList<Integer> even;
 
 
     public OddNumbersExterminator() {
