@@ -2,14 +2,23 @@ package com.kodilla.testing.shape;
 
 public class Triangle implements Shape {
 
-    public void getShapeName() {
-        System.out.println("Triangle");
+    private String name;
+    private int value;
 
+    public Triangle(String name, int value){
+        this.name = name;
+        this.value = value;
     }
 
-    @Override
-    public void getField() {
-        System.out.println(7);
+    public String getShapeName() {
+        return name;
+    }
 
+    public int getField() {
+        return value;
+    }
+
+    public String toString(){
+        return name + value;
     }
 }

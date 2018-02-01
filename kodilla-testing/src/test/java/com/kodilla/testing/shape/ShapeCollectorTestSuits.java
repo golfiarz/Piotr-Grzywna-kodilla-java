@@ -6,7 +6,7 @@ public class ShapeCollectorTestSuits {
 
     @Test
     public void testProcess(){
-        Shape circle = new Circle();
+        Shape circle = new Circle("Circle", 5);
 
         ShapeCollector shapeCollector = new ShapeCollector(circle);
 
