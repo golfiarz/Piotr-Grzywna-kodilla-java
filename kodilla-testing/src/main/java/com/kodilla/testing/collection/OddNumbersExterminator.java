@@ -14,7 +14,7 @@ public class OddNumbersExterminator {
 
         for (int n = 0; n < counter; n++) {
             int numberValue = number.get(n);
-            if (numberValue % 2 == 0) {
+            if (numberValue % 4 == 0) {
                 even.add(numberValue);
 
             }
