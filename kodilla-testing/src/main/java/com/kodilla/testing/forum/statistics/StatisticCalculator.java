@@ -1,26 +1,25 @@
 package com.kodilla.testing.forum.statistics;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class StatisticCalculator {
-    public int users;
-    public int posts;
-    public int comments;
-    public double averagePostToUsers;
-    public double averageComentsToUsers;
-    public double averageComentsToPosts;
+    int users;
+    int posts;
+    int comments;
+    double averagePostToUsers;
+    double averageComentsToUsers;
+    double averageComentsToPosts;
 
-    public void calculateAdvStatistics(Statistics statistics){
+    public double calculateAdvStatistics(){
         users = statistics.usersNames().size();
         posts = statistics.postsCount();
         comments = statistics.comentsCount();
-        if(users != 0){
-            averagePostToUsers = posts / (double)users;
-            averageComentsToUsers = comments / (double)users;
+        if(users != null){
+            averagePostToUsers = posts / users;
+            averageComentsToUsers = comments / users;
         }
-        if (posts != 0){
-            averageComentsToPosts = comments / (double)posts;
+        if (posts != null){
+            averageComentsToPosts = comments / posts;
         }
+
+        return 0;
     }
 }
