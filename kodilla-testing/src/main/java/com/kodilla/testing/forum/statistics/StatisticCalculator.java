@@ -16,11 +16,11 @@ public class StatisticCalculator {
         posts = statistics.postsCount();
         comments = statistics.comentsCount();
         if(users != 0){
-            averagePostToUsers = posts / users;
-            averageComentsToUsers = comments / users;
+            averagePostToUsers = posts / (double)users;
+            averageComentsToUsers = comments / (double)users;
         }
         if (posts != 0){
-            averageComentsToPosts = comments / posts;
+            averageComentsToPosts = comments / (double)posts;
         }
 
     }
