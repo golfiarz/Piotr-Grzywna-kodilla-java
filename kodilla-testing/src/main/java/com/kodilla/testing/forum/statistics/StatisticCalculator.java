@@ -22,6 +22,5 @@ public class StatisticCalculator {
         if (posts != 0){
             averageComentsToPosts = comments / (double)posts;
         }
-
     }
 }
