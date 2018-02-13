@@ -84,4 +84,25 @@ public class BookDirectoryTestSuite {
         verify(libraryDatabaseMock, times(0)).listBooksWithCondition(anyString());
 
     }
+
+    @Test
+    public void testListBooksInHandsOf(){
+        //Given
+        LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
+        BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
+        List<Book> resultListOf0BooksInHandsOf = new ArrayList<>();
+        List<Book> resultListOf1BooksInHandsOf = generateListOfNBooks(1);
+        List<Book> resultListOf5BooksInHandsOf = generateListOfNBooks(5);
+        when(libraryDatabaseMock.listBooksInHandsOf("Piotr", "Grzywna", "12345")).thenReturn(resultListOf0BooksInHandsOf);
+        when(libraryDatabaseMock.listBooksInHandsOf("Pawel", "Nowak", "23456")).thenReturn(resultListOf1BooksInHandsOf);
+        when(libraryDatabaseMock.listBooksInHandsOf("Gawel", "Kowalski", "34567")).thenReturn((resultListOf5BooksInHandsOf));
+        //When
+        List<Book> listBookInHandOf0 = bookLibrary.listBooksInHandsOf("Piotr", "Grzywna", "12345");
+        List<Book> listBookInHandOf1 = bookLibrary.listBooksInHandsOf("Pawel", "Nowak", "23456");
+        List<Book> listBookInHandOf5 = bookLibrary.listBooksInHandsOf("Gawel", "Kowalski", "34567");
+        //Then
+        assertEquals(0,listBookInHandOf0.size());
+        assertEquals(1, listBookInHandOf1.size());
+        assertEquals(5, listBookInHandOf5.size());
+    }
 }
