@@ -3,7 +3,7 @@ package com.kodilla.testing.library;
 import java.util.List;
 
 public interface LibraryDatabase {
-    List<Book> listBooksWithConditions(String titleFraagment);
+    List<Book> listBooksWithCondition(String titleFraagment);
 
     List<Book> listBooksInHandsOf(LibraryUser libraryUser);
 
