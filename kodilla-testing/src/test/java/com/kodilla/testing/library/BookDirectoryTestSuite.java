@@ -92,8 +92,6 @@ public class BookDirectoryTestSuite {
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
         List<Book> resultListOf0BooksInHandsOf = new ArrayList<>();
-        List<Book> resultListOf1BooksInHandsOf = generateListOfNBooks(1);
-        List<Book> resultListOf5BooksInHandsOf = generateListOfNBooks(5);
         LibraryUser libraryUser = new LibraryUser("Piotr", "Grzywna","12345");
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf0BooksInHandsOf);
 
@@ -110,9 +108,7 @@ public class BookDirectoryTestSuite {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        List<Book> resultListOf0BooksInHandsOf = new ArrayList<>();
         List<Book> resultListOf1BooksInHandsOf = generateListOfNBooks(1);
-        List<Book> resultListOf5BooksInHandsOf = generateListOfNBooks(5);
         LibraryUser libraryUser = new LibraryUser("Piotr", "Grzywna", "12345");
         when(libraryDatabaseMock.listBooksInHandsOf(libraryUser)).thenReturn(resultListOf1BooksInHandsOf);
 
@@ -129,8 +125,6 @@ public class BookDirectoryTestSuite {
         //Given
         LibraryDatabase libraryDatabaseMock = mock(LibraryDatabase.class);
         BookLibrary bookLibrary = new BookLibrary(libraryDatabaseMock);
-        List<Book> resultListOf0BooksInHandsOf = new ArrayList<>();
-        List<Book> resultListOf1BooksInHandsOf = generateListOfNBooks(1);
         List<Book> resultListOf5BooksInHandsOf = generateListOfNBooks(5);
         LibraryUser libraryUser = new LibraryUser("Piotr", "Grzywna", "12345");
 
