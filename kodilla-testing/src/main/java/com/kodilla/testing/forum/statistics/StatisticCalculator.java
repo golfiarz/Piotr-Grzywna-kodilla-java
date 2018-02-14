@@ -8,15 +8,15 @@ public class StatisticCalculator {
     double averageComentsToUsers;
     double averageComentsToPosts;
 
-    public double calculateAdvStatistics(){
+    public double calculateAdvStatistics(Statistics statistics){
         users = statistics.usersNames().size();
         posts = statistics.postsCount();
         comments = statistics.comentsCount();
-        if(users != null){
+        if(users != 0){
             averagePostToUsers = posts / users;
             averageComentsToUsers = comments / users;
         }
-        if (posts != null){
+        if (posts != 0){
             averageComentsToPosts = comments / posts;
         }
 
