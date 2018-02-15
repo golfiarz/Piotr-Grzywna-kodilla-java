@@ -1,10 +1,13 @@
 package com.kodilla.stream;
 
-import com.kodilla.stream.book.Book;
-import com.kodilla.stream.book.BookDirectory;
+
 import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
-import com.kodilla.stream.person.People;
+
+import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 
 import java.util.List;
 import java.util.Map;
@@ -15,7 +18,7 @@ public class StreamMain {
         Forum forum = new Forum();
         Map<Integer, Object> resultListOfForumUsers = forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getSex() == 'M')
-                .filter(forumUser -> forumUser.getBorn().getYear() < 1998)
+                .filter(forumUser -> forumUser.getBorn().getYear() < LocalDateTime.now().getYear() - 20)
                 .filter(forumUser -> forumUser.getPosts() > 0)
                 .collect(Collectors.toMap(ForumUser::getIdNumber, forumUser -> forumUser));
 
