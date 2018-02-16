@@ -5,11 +5,7 @@ import com.kodilla.stream.forumuser.Forum;
 import com.kodilla.stream.forumuser.ForumUser;
 
 import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.GregorianCalendar;
 
-
-import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
@@ -18,7 +14,7 @@ public class StreamMain {
         Forum forum = new Forum();
         Map<Integer, Object> resultListOfForumUsers = forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getSex() == 'M')
-                .filter(forumUser -> forumUser.getBorn().getYear() < LocalDateTime.now().getYear() - 20)
+                .filter(forumUser -> forumUser.getBorn().getYear() < LocalDateTime.now().getYear() - 19)
                 .filter(forumUser -> forumUser.getPosts() > 0)
                 .collect(Collectors.toMap(ForumUser::getIdNumber, forumUser -> forumUser));
 
