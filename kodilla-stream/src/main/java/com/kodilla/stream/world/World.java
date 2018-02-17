@@ -7,17 +7,10 @@ import java.util.List;
 public final class World {
     private final List<Continent> continents = new ArrayList<>();
 
-    public void addConinent(Continent continent){
-        continents.add(continent);
+    public BigDecimal getPeopleQuantity(){
+        BigDecimal totalPopulation = continents.stream()
+                .flatMap(continent -> continent.getCountries().stream())
+                .map(Country::getPeopleQuantity)
+                .reduce(BigDecimal.ZERO, (sum, current) -> sum = sum.add(current);
     }
-
-    public boolean removeContinent(Continent continent){
-        return continents.remove(continent);
-    }
-
-
-
-
-
-
 }
