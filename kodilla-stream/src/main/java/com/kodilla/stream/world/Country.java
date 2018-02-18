@@ -17,9 +17,15 @@ public final class Country {
 
     public String getNameCountry() {
         return nameCountry;
-
     }
 
+    @Override
+    public String toString() {
+        return "Country{" +
+                "nameCountry='" + nameCountry + '\'' +
+                ", population=" + population +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {

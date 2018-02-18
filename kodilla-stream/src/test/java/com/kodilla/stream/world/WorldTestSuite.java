@@ -12,18 +12,26 @@ public class WorldTestSuite {
     @Test
     public void testGetPeopleQuantity() {
         //Given
-        List<Country> countriesEurope = new ArrayList<>();
-        List<Continent> worldContinents = new ArrayList<>();
+        World populationWorld = new World();
+        Continent europa = new Continent();
+        Continent northAmerica = new Continent();
+
 
 
         //When
-        countriesEurope.add(new Country("Poland","40000000"));
-        countriesEurope.add(new Country("German", "50000000"));
-        countriesEurope.add(new Country("France", "60000000"));
+        europa.addCountries(new Country("Poland",BigDecimal.valueOf(40_000_000)));
+        europa.addCountries(new Country("German", BigDecimal.valueOf(50_000_000)));
+        europa.addCountries(new Country("France", BigDecimal.valueOf(60_000_000)));
+        northAmerica.addCountries(new Country("USA", BigDecimal.valueOf(250_000_000)));
+        northAmerica.addCountries(new Country("Canada",BigDecimal.valueOf(20_000_000)));
+        populationWorld.addContinents(europa);
+        populationWorld.addContinents(northAmerica);
+
+
 
         //Then
-        BigDecimal populationEqual = new BigDecimal("150000000");
-        Assert.assertEquals(populationEqual, worldContinents.getPeopleQuantiry(),0 );
+        BigDecimal populationEqual = new BigDecimal("420000000");
+        Assert.assertEquals(populationEqual, populationWorld.getPeopleQuantity());
     }
 
 }
