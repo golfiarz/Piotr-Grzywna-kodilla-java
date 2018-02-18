@@ -17,10 +17,7 @@ public final class Country {
 
     public String getNameCountry() {
         return nameCountry;
-    }
 
-    public BigDecimal getPopulation() {
-        return population;
     }
 
 
@@ -34,5 +31,8 @@ public final class Country {
         return nameCountry.equals(country.nameCountry);
     }
 
-
+    @Override
+    public int hashCode() {
+        return nameCountry.hashCode();
+    }
 }

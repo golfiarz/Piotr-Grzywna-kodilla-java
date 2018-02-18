@@ -10,5 +10,12 @@ public final class Continent {
         return countries;
     }
 
+    public void addCountries(Country country){
+        countries.add(country);
+    }
+
+    public boolean removeCountries(Country country){
+        return countries.remove(country);
+    }
 }
 
