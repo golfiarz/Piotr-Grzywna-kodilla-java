@@ -11,6 +11,7 @@ import java.util.stream.Collectors;
 
 public class StreamMain {
     public static void main(String[] args) {
+
         Forum forum = new Forum();
         Map<Integer, Object> resultListOfForumUsers = forum.getUserList().stream()
                 .filter(forumUser -> forumUser.getSex() == 'M')
