@@ -6,6 +6,7 @@ import org.junit.Test;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collector;
 
 import static java.util.stream.Collectors.toList;
@@ -147,10 +148,17 @@ public class BoardTestSuite {
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-        long longTask = project.getTaskLists().stream()
+        long longTask = (long) project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .map(Task::getCreated);
+                .mapToInt(n -> n.getCreated().compareTo(LocalDate.now()))
+                .average()
+                .orElse(0);
+
+        //Then
+        Assert.assertEquals(-10, longTask,0);
+
+
 
 
 
