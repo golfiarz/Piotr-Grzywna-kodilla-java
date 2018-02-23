@@ -31,7 +31,7 @@ public class BoardTestSuite {
                 "Prepare some HQL queries for analysis",
                 user1,
                 user2,
-                LocalDate.now().minusDays(20),
+                LocalDate.now().minusDays(50),
                 LocalDate.now().minusDays(5));
         Task task3 = new Task("Temperatures entity",
                 "Prepare entity for temperatures",
@@ -148,15 +148,15 @@ public class BoardTestSuite {
         //When
         List<TaskList> inProgressTasks = new ArrayList<>();
         inProgressTasks.add(new TaskList("In progress"));
-        long longTask = (long) project.getTaskLists().stream()
+        long longTask =  (long) project.getTaskLists().stream()
                 .filter(inProgressTasks::contains)
                 .flatMap(tl -> tl.getTasks().stream())
-                .mapToInt(n -> n.getCreated().compareTo(LocalDate.now()))
+                .mapToInt(n -> (int)(LocalDate.now().toEpochDay() - n.getCreated().toEpochDay()))
                 .average()
                 .orElse(0);
 
         //Then
-        Assert.assertEquals(-10, longTask,0);
+        Assert.assertEquals(20, longTask,0);
 
 
 
