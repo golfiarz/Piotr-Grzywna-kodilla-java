@@ -17,10 +17,8 @@ public class ArrayOperationsTestSuite {
             sum = sum + numbersTab[i];
         }
         double average = sum / numbersTab.length;
-
         //When
         double averageNumber =  ArrayOperations.getAverage(numbersTab);
-
         //Then
         Assert.assertEquals(average , averageNumber, 0);
 
