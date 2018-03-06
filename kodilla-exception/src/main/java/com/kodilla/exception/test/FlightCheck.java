@@ -10,7 +10,10 @@ public final class FlightCheck {
         airports.put("Jasionka", true);
         airports.put("Stansed", true);
 
-            if (airports.get(flight.getArrivalAirport()) == true) {
+
+
+
+            if (airports.get(flight.getArrivalAirport())) {
 
                 System.out.println("Available");
             } else {
@@ -18,9 +21,9 @@ public final class FlightCheck {
                 System.out.println("Not");
             }
 
+        airports.containsKey(flight);
 
-            throw new RouteNotFoundException();
-
+        throw new RouteNotFoundException();
 
         }
     }
