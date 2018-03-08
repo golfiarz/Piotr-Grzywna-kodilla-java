@@ -15,7 +15,7 @@ public class MovieStoryRun {
                 .map(l ->l.toString())
                 .collect(Collectors.joining("!","<<", ">>"));
 
-        System.out.println(movieStory);
+        System.out.println(movieStoryList);
 
 
 
