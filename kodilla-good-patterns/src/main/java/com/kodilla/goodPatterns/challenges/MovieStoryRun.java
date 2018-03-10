@@ -12,7 +12,7 @@ public class MovieStoryRun {
 
         String movieStoryList = movieStory.getMovies().entrySet().stream()
                 .map(k -> k.getValue())
-                .map(l ->l.toString())
+                .flatMap(s ->s.stream())
                 .collect(Collectors.joining("!","<<", ">>"));
 
         System.out.println(movieStoryList);
