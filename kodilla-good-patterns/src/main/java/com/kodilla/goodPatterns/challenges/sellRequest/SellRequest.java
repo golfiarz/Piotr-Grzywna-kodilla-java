@@ -1,4 +1,7 @@
-package com.kodilla.goodPatterns.challenges;
+package com.kodilla.goodPatterns.challenges.sellRequest;
+
+import com.kodilla.goodPatterns.challenges.products.Invoice;
+import com.kodilla.goodPatterns.challenges.users.User;
 
 public class SellRequest {
 

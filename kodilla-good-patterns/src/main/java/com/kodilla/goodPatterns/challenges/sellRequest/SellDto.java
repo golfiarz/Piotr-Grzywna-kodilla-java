@@ -1,4 +1,6 @@
-package com.kodilla.goodPatterns.challenges;
+package com.kodilla.goodPatterns.challenges.sellRequest;
+
+import com.kodilla.goodPatterns.challenges.users.User;
 
 public class SellDto {
     public User user;

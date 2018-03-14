@@ -1,4 +1,4 @@
-package com.kodilla.goodPatterns.challenges;
+package com.kodilla.goodPatterns.challenges.products;
 
 public final class Item {
     private final Product product;
@@ -20,5 +20,7 @@ public final class Item {
     public double getValue() {
         return product.getPrice() * quantity;
     }
+
+    
 
 }

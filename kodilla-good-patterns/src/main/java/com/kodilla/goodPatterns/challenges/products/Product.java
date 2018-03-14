@@ -1,4 +1,4 @@
-package com.kodilla.goodPatterns.challenges;
+package com.kodilla.goodPatterns.challenges.products;
 
 public final class Product {
     private final String productName;

@@ -1,14 +1,16 @@
-package com.kodilla.goodPatterns.challenges;
+package com.kodilla.goodPatterns.challenges.selling;
+
+import com.kodilla.goodPatterns.challenges.sellRequest.SellDto;
+import com.kodilla.goodPatterns.challenges.sellRequest.SellRequest;
 
 public class ProductOrderService {
     private InformationService informationService;
     private SellService sellService;
-    private SellRespository sellRespository;
 
-    public ProductOrderService(final InformationService informationService, final SellService sellService, final SellRespository sellRespository) {
+    public ProductOrderService(final InformationService informationService, final SellService sellService) {
         this.informationService = informationService;
         this.sellService = sellService;
-        this.sellRespository = sellRespository;
+
     }
 
     public SellDto process(final SellRequest sellRequest) {
