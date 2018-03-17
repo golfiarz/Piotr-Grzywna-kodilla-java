@@ -14,15 +14,16 @@ public class ProductOrderService {
     }
 
     public SellDto process(final SellRequest sellRequest) {
-        boolean isSold = sellService.sell(sellRequest.getUser(), sellRequest.getInvoice());
+        boolean isSold = sellService.sell(sellRequest.getUser(), sellRequest.getInvoice(), sellRequest.getProducer(), sellRequest.getProducerProduct());
 
         if (isSold) {
-            informationService.inform(sellRequest.getUser(), sellRequest.getInvoice());
-            sellService.sell(sellRequest.getUser(), sellRequest.getInvoice());
-            return new SellDto(sellRequest.getUser(), true);
+            informationService.inform(sellRequest.getUser(), sellRequest.getInvoice(), sellRequest.getProducer(), sellRequest.getProducerProduct());
+            sellService.sell(sellRequest.getUser(), sellRequest.getInvoice(), sellRequest.getProducer(), sellRequest.getProducerProduct());
+            return  new SellDto(sellRequest.getUser(), sellRequest.getProducer(), true);
         } else {
-            return new SellDto(sellRequest.getUser(), false);
+            return new SellDto(sellRequest.getUser(), sellRequest.getProducer(), false);
         }
+
 
 
     }
