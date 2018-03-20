@@ -8,6 +8,10 @@ import java.util.stream.Collectors;
 public final class Invoice {
     private final List<Item> items = new ArrayList<>();
 
+    public List<Item> getItems() {
+        return items;
+    }
+
     public void addItem(Item item) {
         items.add(item);
     }
@@ -27,12 +31,12 @@ public final class Invoice {
                 .collect(Collectors.joining(" and ", "<", ">"));
 
     }
-
+/*
     public List<Item> getProductAvailable(){
         return items.stream()
                 .filter(item -> item.getQuantity() < item.getProduct().getQuantityAvailable())
                 .collect(Collectors.toList());
 
-    }
+    }*/
 
 }

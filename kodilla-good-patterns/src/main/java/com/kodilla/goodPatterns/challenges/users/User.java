@@ -16,4 +16,12 @@ public class User {
     public String getSureName() {
         return sureName;
     }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", sureName='" + sureName + '\'' +
+                '}';
+    }
 }

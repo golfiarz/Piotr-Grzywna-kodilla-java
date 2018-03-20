@@ -12,17 +12,17 @@ import java.util.*;
 
 public class SellRequestRetriver {
     public SellRequest retrieve() {
-        Product product = new Product("A", 2, "Geber", 100);
-        Product product1 = new Product("B", 1, "Bobo", 100);
+        Product product = new Product("A", 2, "Geber");
+        Product product1 = new Product("B", 1, "Bobo");
 
         User user = new User("Piotr", "Grzywna");
 
-        Item item = new Item(product, 200);
-        Item item1 = new Item(product1, 20);
+        Item item1 = new Item(product, 200);
+        Item item2 = new Item(product1, 20);
 
         Invoice invoice = new Invoice();
-        invoice.addItem(item);
-        invoice.addItem(item);
+        invoice.addItem(item1);
+        invoice.addItem(item2);
 
         return new SellRequest(user, invoice);
     }
