@@ -3,10 +3,15 @@ package com.kodilla.goodPatterns.challenges.products;
 public final class Product {
     private final String productName;
     private final double price;
+    private final String producerProduct;
+    private final double quantityAvailable;
 
-    public Product(String productName, double price) {
+    public Product(final String productName, final double price,
+                   final String producerProduct, final double quantityAvailable) {
         this.productName = productName;
         this.price = price;
+        this.producerProduct = producerProduct;
+        this.quantityAvailable = quantityAvailable;
     }
 
     public String getProductName() {
@@ -15,6 +20,14 @@ public final class Product {
 
     public double getPrice() {
         return price;
+    }
+
+    public String getProducerProduct() {
+        return producerProduct;
+    }
+
+    public double getQuantityAvailable() {
+        return quantityAvailable;
     }
 
     @Override

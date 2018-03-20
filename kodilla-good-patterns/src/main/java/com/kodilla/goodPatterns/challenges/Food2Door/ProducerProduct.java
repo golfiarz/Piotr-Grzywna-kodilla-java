@@ -3,6 +3,8 @@ package com.kodilla.goodPatterns.challenges.Food2Door;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+
 public final class ProducerProduct {
     private final List<ProductAvailable> productAvailables = new ArrayList<>();
 
@@ -21,3 +23,4 @@ public final class ProducerProduct {
 
 
 }
+ */

@@ -6,6 +6,8 @@ import com.kodilla.goodPatterns.challenges.products.Product;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+
 public class Producer {
     private String nameCompany;
 
@@ -17,6 +19,7 @@ public class Producer {
         return nameCompany;
     }
 }
+*/
 
 
 
