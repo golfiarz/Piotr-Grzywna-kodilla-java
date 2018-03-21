@@ -4,21 +4,39 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+
 public final class Invoice {
     private final List<Item> items = new ArrayList<>();
 
-    public void addItem(Item item){
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void addItem(Item item) {
         items.add(item);
     }
 
-    public boolean removeItem(Item item){
+    public boolean removeItem(Item item) {
         return items.remove(item);
     }
 
-    public double getValueToPay(){
+    public double getValueToPay() {
         return items.stream()
                 .collect(Collectors.summingDouble(Item::getValue));
     }
 
+    public String getItemProduct() {
+        return items.stream()
+                .map(a -> a.getProduct().getProductName())
+                .collect(Collectors.joining(" and ", "<", ">"));
+
+    }
+/*
+    public List<Item> getProductAvailable(){
+        return items.stream()
+                .filter(item -> item.getQuantity() < item.getProduct().getQuantityAvailable())
+                .collect(Collectors.toList());
+
+    }*/
 
 }

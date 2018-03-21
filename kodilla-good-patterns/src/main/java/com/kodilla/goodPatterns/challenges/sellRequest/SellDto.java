@@ -1,9 +1,13 @@
 package com.kodilla.goodPatterns.challenges.sellRequest;
 
+
 import com.kodilla.goodPatterns.challenges.users.User;
 
 public class SellDto {
     public User user;
+    /**
+    public Producer producer;
+     */
     public boolean isSold;
 
     public SellDto(User user, boolean isSold) {
@@ -18,4 +22,16 @@ public class SellDto {
     public boolean isSold() {
         return isSold;
     }
+
+    @Override
+    public String toString() {
+        return "SellDto{" +
+                "user=" + user +
+                ", isSold=" + isSold +
+                '}';
+    }
 }
+
+
+
+

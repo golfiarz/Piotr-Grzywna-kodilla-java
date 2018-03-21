@@ -1,9 +1,9 @@
 package com.kodilla.goodPatterns.challenges.selling;
 
-import com.kodilla.goodPatterns.challenges.products.Invoice;
-import com.kodilla.goodPatterns.challenges.users.User;
+
+import com.kodilla.goodPatterns.challenges.sellRequest.SellRequest;
 
 public interface SellService {
 
-    boolean sell(User user, Invoice invoice);
+    boolean sell(SellRequest sellRequest);
 }
