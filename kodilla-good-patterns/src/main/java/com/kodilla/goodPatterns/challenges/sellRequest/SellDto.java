@@ -5,9 +5,6 @@ import com.kodilla.goodPatterns.challenges.users.User;
 
 public class SellDto {
     public User user;
-    /**
-    public Producer producer;
-     */
     public boolean isSold;
 
     public SellDto(User user, boolean isSold) {

@@ -1,14 +1,10 @@
 package com.kodilla.goodPatterns.challenges.sellRequest;
 
-
-import com.kodilla.goodPatterns.challenges.Food2Door.ProductAvailable;
 import com.kodilla.goodPatterns.challenges.products.Invoice;
 import com.kodilla.goodPatterns.challenges.products.Item;
 import com.kodilla.goodPatterns.challenges.products.Product;
 
 import com.kodilla.goodPatterns.challenges.users.User;
-
-import java.util.*;
 
 public class SellRequestRetriver {
     public SellRequest retrieve() {
