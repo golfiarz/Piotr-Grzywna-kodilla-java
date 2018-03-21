@@ -19,6 +19,17 @@ public class SellDto {
         return user;
     }
 
+    public boolean isSold() {
+        return isSold;
+    }
+
+    @Override
+    public String toString() {
+        return "SellDto{" +
+                "user=" + user +
+                ", isSold=" + isSold +
+                '}';
+    }
 }
 
 
