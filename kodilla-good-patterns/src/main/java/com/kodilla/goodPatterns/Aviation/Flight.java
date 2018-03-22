@@ -16,6 +16,14 @@ public final class Flight {
     public Airport getArrival() {
         return arrival;
     }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "depart=" + depart +
+                ", arrival=" + arrival +
+                '}';
+    }
 }
 
 

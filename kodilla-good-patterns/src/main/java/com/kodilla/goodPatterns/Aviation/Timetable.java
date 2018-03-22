@@ -14,5 +14,7 @@ public final class Timetable {
         return flights.remove(flight);
     }
 
-
+    public List<Flight> getFlights() {
+        return flights;
+    }
 }

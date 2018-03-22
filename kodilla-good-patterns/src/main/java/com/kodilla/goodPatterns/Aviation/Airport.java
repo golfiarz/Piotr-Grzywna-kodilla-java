@@ -11,10 +11,11 @@ public final class Airport {
         return airport;
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return "airport='" + airport + '\'' +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
