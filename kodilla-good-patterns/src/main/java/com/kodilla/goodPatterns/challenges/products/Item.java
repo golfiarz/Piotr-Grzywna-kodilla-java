@@ -2,9 +2,9 @@ package com.kodilla.goodPatterns.challenges.products;
 
 public final class Item {
     private final Product product;
-    private final double quantity;
+    private final int quantity;
 
-    public Item(Product product, double quantity) {
+    public Item(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
     }
@@ -13,13 +13,15 @@ public final class Item {
         return product;
     }
 
-    public double getQuantity() {
+    public int getQuantity() {
         return quantity;
     }
 
     public double getValue() {
         return product.getPrice() * quantity;
     }
+
+
 
     
 

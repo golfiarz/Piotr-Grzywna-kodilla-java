@@ -1,5 +1,7 @@
 package com.kodilla.goodPatterns.challenges.sellRequest;
 
+
+
 import com.kodilla.goodPatterns.challenges.products.Invoice;
 import com.kodilla.goodPatterns.challenges.users.User;
 
@@ -8,9 +10,10 @@ public class SellRequest {
     public User user;
     public Invoice invoice;
 
-    public SellRequest(final User user, final Invoice invoice) {
+    public SellRequest(User user, Invoice invoice) {
         this.user = user;
         this.invoice = invoice;
+
     }
 
     public User getUser() {
@@ -20,4 +23,5 @@ public class SellRequest {
     public Invoice getInvoice() {
         return invoice;
     }
+
 }
