@@ -5,10 +5,10 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Rps {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
 
         String player;
-        char move;
+        String move;
         int round = 1;
         int wins = 0;
         boolean end = false;
@@ -28,11 +28,11 @@ public class Rps {
 
             System.out.println("Round: " + round + "!, Your move:");
             round++;
-            
-            move = (char) write.nextShort();
+
+            move =  write.nextLine();
             int ran = randomGenerator.nextInt(3)+1;
 
-            if (move == 1) {
+            if (move == "1") {
                 if (ran == 1) {
                     System.out.println("rocks vs rock - draw");
                 }
@@ -46,7 +46,7 @@ public class Rps {
                 }
             }
 
-            if (move == 2) {
+            if (move == "2") {
                 if (ran == 1) {
                     System.out.println("paper vs rock - win player");
                     playerPoints++;
@@ -60,7 +60,7 @@ public class Rps {
                 }
             }
 
-            if (move == 3) {
+            if (move == "3") {
                 if (ran == 1) {
                     System.out.println("scissors vs rock - win computer");
                     computerPoints++;
@@ -74,10 +74,10 @@ public class Rps {
                 }
             }
 
-            if (move == 4) {
+            if (move == "x") {
                 System.out.println("Do you really want finish game? Chicken");
-                move = (char) write.nextShort();
-                if (move == 6) {
+                move = write.nextLine();
+                if (move == "y") {
                     end = true;
                 } else {
                     round = round - 1;
@@ -85,10 +85,10 @@ public class Rps {
                 }
             }
 
-            if (move == 5) {
+            if (move == "n") {
                 System.out.println("Do you really want restart game? Looser");
-                move = (char) write.nextShort();
-                if (move == 7) {
+                move = write.nextLine();
+                if (move == "y") {
                     playerPoints = 0;
                     computerPoints = 0;
                     round = 1;
@@ -97,9 +97,6 @@ public class Rps {
                     round = round - 1;
                     System.out.println("Play continue");
                 }
-            } else {
-                round = round -1;
-                System.out.println("Chose again");
             }
 
             System.out.println("Player have : " + playerPoints + "points. Computer have : " + computerPoints + " points");
