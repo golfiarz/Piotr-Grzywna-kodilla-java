@@ -1,32 +1,21 @@
-/*package com.kodilla.rps;
+package com.kodilla.rps;
 
-import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Rps {
-    public static void main(String[] args)  {
+public class Game {
+    String move;
+    int round = 1;
+    int wins = 0;
+    boolean end = false;
+    int playerPoints = 0;
+    int computerPoints = 0;
+    Random randomGenerator = new Random();
 
-        String player;
-        String move;
-        int round = 1;
-        int wins = 0;
-        boolean end = false;
-        int playerPoints = 0;
-        int computerPoints = 0;
-
-        Scanner write = new Scanner(System.in);
-        Random randomGenerator = new Random();
-
-        System.out.println("What your name?");
-        player = write.nextLine();
-        System.out.println("Hello " + player + ". How many round we play?");
-        wins = write.nextInt();
-        System.out.println("Ok, we play to" + wins + " wins. Let start!!!");
-
+    public void Gameprocess(Player player, int wins){
         while (!end) {
 
-            System.out.println("Round: " + round + "!, Your move:");
+            System.out.println("Round: " + wins + "!, Your move:");
             round++;
 
             move = new Scanner(System.in).nextLine();
@@ -110,7 +99,6 @@ public class Rps {
                 System.out.println("Computer win!!!. Try again");
             }
         }
+
     }
 }
-
-*/
