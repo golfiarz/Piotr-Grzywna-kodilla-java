@@ -9,6 +9,7 @@ public class FirstChallenge {
            try{
                throw new ArithmeticException();
            } catch (ArithmeticException e) {
+
                System.out.println("Oh no! Something went wrong" + e);
            } finally {
                System.out.println("I am gonna be here ... always!");
