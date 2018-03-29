@@ -6,34 +6,43 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Configuration
 public class BoardConfig {
+
+    @Bean(name = "toDo")
+    @Scope("prototype")
+    public TaskList getToDoList(){ return new TaskList(); }
+
+    @Bean(name = "progress")
+    @Scope("prototype")
+    public TaskList getInProgressList() {
+        return new TaskList();
+    }
+
+    @Bean(name = "done")
+    @Scope("prototype")
+    public TaskList getDoneList(){
+        return new TaskList();
+    }
+
+
     @Autowired
-    @Qualifier
-    TaskList taskList;
+    @Qualifier(value = "toDo")
+    TaskList todoList;
+
+    @Autowired
+    @Qualifier(value = "progress")
+    TaskList inProgress;
+
+    @Autowired
+    @Qualifier(value = "done")
+    TaskList doneList;
+
 
     @Bean
     public Board getBoard(){
-        return new Board(taskList, taskList, taskList);
-    }
-    @Bean
-    @Scope
-    public TaskList getToDoList(){
-        return new TaskList();
-    }
-
-    @Bean
-    @Scope
-    public TaskList getInProgressList(){
-        return new TaskList();
-    }
-
-    @Bean
-    @Scope
-    public TaskList getDoneList(){
-        return new TaskList();
+        return new Board(todoList, inProgress, doneList);
     }
 }

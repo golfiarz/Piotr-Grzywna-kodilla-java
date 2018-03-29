@@ -5,6 +5,7 @@ public final class Board {
     final TaskList inProgressList;
     final TaskList doneList;
 
+
     public Board(TaskList toDoList, TaskList inProgressList, TaskList doneList) {
         this.toDoList = toDoList;
         this.inProgressList = inProgressList;
