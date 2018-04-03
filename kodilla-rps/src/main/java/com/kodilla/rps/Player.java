@@ -1,11 +1,8 @@
 package com.kodilla.rps;
 
-import java.util.Scanner;
+public class Player {
 
-public final class Player {
-    private  String name;
-
-    Scanner write = new Scanner(System.in);
+    private String name;
 
     public Player(String name) {
         this.name = name;
