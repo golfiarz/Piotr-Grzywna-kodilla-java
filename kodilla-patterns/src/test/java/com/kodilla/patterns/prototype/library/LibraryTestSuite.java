@@ -54,8 +54,11 @@ public class LibraryTestSuite {
         }
 
         //When
-        booksRented.getBooks().remove("Title 1");
-        booksAvailable.getBooks().remove("Title 11");
+        Book someBook1 = new Book("Title 1", "Author 1", LocalDate.of(1995,12,1));
+        booksRented.getBooks().remove(someBook1);
+
+        Book someBook2 = new Book ("Title 11", "Author 11", LocalDate.of(1988,1,1));
+        booksAvailable.getBooks().remove(someBook2);
 
         //Then
         System.out.println(booksRented);
@@ -64,11 +67,11 @@ public class LibraryTestSuite {
         System.out.println(booksAvailable);
         System.out.println(clonedBooksAvaiable);
         System.out.println(deepClonedBooksAvailable);
-        Assert.assertEquals(5, booksRented.getBooks().size());
-        Assert.assertEquals(5, clonedBooksRented.getBooks().size());
+        Assert.assertEquals(4, booksRented.getBooks().size());
+        Assert.assertEquals(4, clonedBooksRented.getBooks().size());
         Assert.assertEquals(5, deepClonedBooksRented.getBooks().size());
-        Assert.assertEquals(10, booksAvailable.getBooks().size());
-        Assert.assertEquals(10, clonedBooksAvaiable.getBooks().size());
+        Assert.assertEquals(9, booksAvailable.getBooks().size());
+        Assert.assertEquals(9, clonedBooksAvaiable.getBooks().size());
         Assert.assertEquals(10,deepClonedBooksAvailable.getBooks().size());
 
     }
