@@ -16,6 +16,7 @@ public final class TaskList {
         this.listName = listName;
         this.description = description;
     }
+
     @Id
     @GeneratedValue
     @NotNull
