@@ -6,8 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 @NamedQuery(
-        name = "Employee.findSurname",
-        query = "FROM Employee WHERE lastName > :LASTNAME"
+        name = "Employee.findBySurname",
+        query = "FROM Employee WHERE lastName = :LASTNAME"
 )
 @Entity
 @Table(name = "employees")

@@ -7,11 +7,11 @@ import java.util.List;
 
 @NamedNativeQuery(
         name = "Company.serchCompany",
-        query = "SELECT * FROM COMPANY WHERE NAME LIKE 'sof%' ",
+        query = "SELECT * FROM COMPANIES WHERE COMPANY_NAME LIKE 'sof%' ",
         resultClass = Company.class
 )
 @Entity
-@Table(name = "campanies")
+@Table(name = "companies")
 public class Company {
 
     private int id;

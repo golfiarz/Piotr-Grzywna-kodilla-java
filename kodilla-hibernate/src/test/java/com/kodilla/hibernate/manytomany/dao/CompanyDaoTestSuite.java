@@ -52,7 +52,7 @@ public class CompanyDaoTestSuite {
         int greyMatterId = greyMatter.getId();
 
         //Then
-        Assert.assertEquals(5, softwareMachineId);
+        Assert.assertNotEquals(0, softwareMachineId);
         Assert.assertNotEquals(0, dataMaestersId);
         Assert.assertNotEquals(0, greyMatterId);
 
@@ -100,7 +100,7 @@ public class CompanyDaoTestSuite {
 
 
         //When
-        List<Employee> serchSurename = employeeDao.findSurname("Smith");
+        List<Employee> serchSurename = employeeDao.findBySurname("Smith");
         List<Company> serchCompany = companyDao.serchCompany();
 
         //Then
